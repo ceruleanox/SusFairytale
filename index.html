@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+        <title>Sustainability Fairytale</title>
+        <link rel="stylesheet" type="text/css" href="./styles.css">
+
+    </head>
+
+    <body>
+
+        <!-- Home Screen -->
+
+        <div id="home" class="home-box">
+            Home
+            <div class="start-btn">
+                <button type="button" onclick="setState(2)">Read On</button>
+            </div>    
+        </div>
+
+        <!-- Intro Screen -->
+
+        <div id="intro" class="intro-box">
+            Intro
+            <div class="buttons">
+                <button type="button" class="quit" onclick="setState(1)">Exit</button>
+                <button type="button" class="next" onclick="setState(3)">Next</button>
+            </div>
+        </div>
+
+        <!-- Ending Screen -->
+
+        <div id="end" class="end-box">   
+            The End        
+            <div class="buttons">
+                <button type="button" class="quit" onclick="setState(1)">Read Again</button>
+            </div>
+        </div>
+
+        <script src="./js/main.js"></script>
+    </body>
+</html>
