@@ -32,34 +32,66 @@
 
         <div id="intro" class="intro-box">
             <div class="story-text">
-                Sal the salmon is one of many fish from The Little Mermaid who was in Norway. It's that time of the year for Sal the Salmon to swim upstream.
+               Sal the salmon is fish. It's that time of year for Sal the Salmon to swim upstream.
                 <div class="start-btn">
                     <button type="button" class="button" onclick="setState(3)">Next</button>
                 </div>            
             </div>
         </div>
 
+       <!-- Reef Screen -->
+
+        <div id="reef" class="reef-box">
+            <div class="story-text">
+                However, Sal thinks that something is off. The water feels too warm, but Sal's friends don't think 
+                anything is wrong.
+                <div class="invisible">
+                    <button type="button" class="button" onclick="setState(4)">REEF!</button>
+                </div>            
+            </div>
+        </div> 
+    
+      
         <!-- Scavenger Screen -->
 
         <div id="scavenger" class="scavenger-box">
             <div class="story-text">
-                This year, however, something feels different. For one, it feels warmer than usual. Click around to make some observations--
-                <button id="louse" class="button_clear" onClick="removeLouse(); addLouseToScrapbook(); showNextBtn(); alert('You find a marine parasite called salmon louse that has attached itself to Sal and feeds on the skin, blood and mucus! Yuck!!! ');"></button>
+                None of the fish notice anything, do you? Tap around to make some observations.
+                <button id="louse" class="button_clear" onclick="removeLouse(); addLouseToScrapbook(); showNextBtn(); alert('You find a marine parasite called salmon louse that live in warmer waters and has attatched itself to Sal and feeds on the skin, blood and mucus! Yuck!!!');"></button>
                 <div class="invisible">
-                    <button id="next-btn" type="button" class="button hidden" onclick="setState(4)">Swim Upstream</button>
+                    <button id="next-btn" type="button" class="button hidden" onclick="setState(5)">Swim Ahead</button>
                 </div>            
             </div>
         </div> 
+      
+        <!-- Soup Screen-->
+      
+        <div id="soup" class="soup-box">
+            <div class="story-text">
+                Sal says bye to his friends and swims upstream to go back home, but he notices a large dam blocking his way.
+                Sal realizes that there are fewer creatures present then there were before. 
+                <br><br>
+                  <i>Maybe the dam is blocking nutrients.</i>
+                <br> <br>
+                <i>What's more, there could be cooler water and more nutrients released if the dam is broken </i>    
+      
+                <div class="invisible">
+                    <button type="button" class="button" onclick="setState(6)">Next</button>
+                </div>            
+            </div>
+        </div> 
+      
 
         <!-- Dam Screen -->
 
         <div id="dam" class="dam-box">
             <div class="story-text">
-                create breakout game - break the dam? https://www.youtube.com/watch?v=DwQ3y7t0_Qg&ab_channel=DavidReid
-                OR
-                swim to dam so make a flappy bird type game; or the vertical version of it where things like rocks drop down from the top and the player has to avoid them 10 of them or something.
-                <div id="next-btn" class="invisible">
-                    <button type="button" class="button" onclick="setState(5)">Break the dam!</button>
+                There are cracks in the dam, tap on them to weaken it and break it down!       
+                   <button id="crack1" type="button" class="button_clear" onclick="showDamBtn();"></button>
+                   <button id="crack2" type="button" class="button_clear" onclick="showDamBtn();"></button>
+                   <button id="crack3" type="button" class="button_clear" onclick="showDamBtn();"></button>
+              <div class="invisible">
+                    <button id = "dam-btn" type="button" class="button hidden" onclick="setState(7)">Dam break!</button>
                 </div>            
             </div>
         </div> 
@@ -68,10 +100,18 @@
         <!-- Solve Screen -->
 
         <div id="solve" class="solve-box">
-            Dam broken! Nutrients flow out (research why Dams are bad...). The end! Next screen would include a scrapbook that shows real-world example of this story ... or not.
-            <div class="buttons">
-                <button type="button" class="next" onclick="setState(6)">Next</button>
+          <div class = "story-text">
+             Hooray! The dam has been broken! The water rushes out and the nutrients and cooler water allow Sal to 
+             reach upstream and complete his goal successfully!
+             It's good Sal is ok, but in real life dams are major issues to river and other aquatic ecosystems.
+             Dams can: ( list some reasons dams are no bueno here)
+             Along with dams, we saw Sal suffer from parasites that appeared in warmer waters, climate change and global warming
+            can contribute to this issue causing more fish, just like Sal, to suffer and die from these parasites.
+            This can result in a drop in our food supply as well as major damage to ecosystems these fish are apart of.
+            <div class="start-btn">
+                <button type="button" class="button" onclick="setState(8)">Next</button>
             </div>
+          </div>
         </div> 
     
 
@@ -239,7 +279,7 @@
 
 
             <div class="buttons">
-                <button type="button" class="quit" onclick="setState(1)">Read Again</button>
+                <button type="button" class="button" onclick="setState(1)">Read Again</button>
             </div>
         </div>
 
@@ -249,5 +289,6 @@
 
         <script src="./js/main.js"></script>
         <script src="js/scavenger.js" defer></script>
+        <script src="./js/dam.js"></script>
     </body>
 </html>
