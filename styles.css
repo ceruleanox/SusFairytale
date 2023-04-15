@@ -30,7 +30,9 @@ h1 {
 
 .home-box,
 .intro-box,
+.reef-box,
 .scavenger-box,
+.soup-box,
 .dam-box,
 .solve-box,
 .end-box {
@@ -43,7 +45,9 @@ h1 {
 
 .home-box,
 .intro-box,
+.reef-box,
 .scavenger-box,
+.soup-box,
 .dam-box,
 .solve-box,
 .end-box {
@@ -164,3 +168,55 @@ h1 {
     height: 60px;
     transform: rotate(28deg);
 }
+/**************** Soup *****************/
+.soup-box
+{
+    background-image: url('https://cdn.glitch.global/78a91c14-1110-4a27-8246-3e428f441424/salSwim.jpg?v=1681535560595'); 
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: left;
+    background-size: 600px;
+  /** re screenshot the picutre to get the sizing right **/
+}
+/**************** Dam ******************/
+
+.dam-box {
+    background-image: url('https://cdn.glitch.global/78a91c14-1110-4a27-8246-3e428f441424/dam1.jpg?v=1681553248937'); 
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: left;
+    background-size: 600px;
+  /** re screenshot the picutre to get the sizing right **/
+}
+
+
+#crack1 {
+    top: 100px;
+    left: 10px;
+    width: 50px;
+    height: 60px;
+    
+}
+
+#crack2{
+    top: 100px;
+    left: 150px;
+    width: 50px;
+    height: 60px;
+  
+  #crack3{
+    top:100px;
+    left: 250px;
+    width: 50px;
+    height: 60px;
+  }
+    
+}
+
+
+
+
+   /* transform: rotate(28deg);*/
+
+
+

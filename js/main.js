@@ -2,17 +2,19 @@
 var storyStates = {
     1: 'home',
     2: 'intro',
-    3: 'scavenger',
-    4: 'dam',
-    5: 'solve',
-    6: 'end'
+    3: 'reef',
+    4: 'scavenger',
+    5: 'soup',
+    6: 'dam',
+    7: 'solve',
+    8: 'end'
 }
 
 
 let setState = function(storyState){
 
     // edit number based on number of storyStates
-    for(var i = 1; i <= 6; i++){
+    for(var i = 1; i <= 8; i++){
         var stateText = storyStates[i];
         // console.log("stateText" + stateText);
         if(storyState === i){
@@ -25,7 +27,7 @@ let setState = function(storyState){
     }
 
     // modify number depending on where end is in storyStates
-    if(storyState === 6){
+    if(storyState === 8){
         document.getElementsByClassName('end-box').item(0).style.display = "visible";
         document.getElementsByClassName('end-box').item(0).style.visibility = "visible";
     }
