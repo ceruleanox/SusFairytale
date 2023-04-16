@@ -32,7 +32,10 @@
 
         <div id="intro" class="intro-box">
             <div class="story-text">
-               Sal the salmon is fish. It's that time of year for Sal the Salmon to swim upstream.
+               Sal is a salmon who lives in a large river, and today is a special day
+               for Sal. 
+                <br><br>
+              It's that time of year for him to swim upstream and go back home.
                 <div class="start-btn">
                     <button type="button" class="button" onclick="setState(3)">Next</button>
                 </div>            
@@ -43,10 +46,10 @@
 
         <div id="reef" class="reef-box">
             <div class="story-text">
-                However, Sal thinks that something is off. The water feels too warm, but Sal's friends don't think 
-                anything is wrong.
+                However, Sal thinks that something is off. The water feels too warm, and it's uncomfortable and perhaps even oppressive for salmon like him.  
+              <br><br>Sal's fishy friends, however, don't think anything is wrong.
                 <div class="invisible">
-                    <button type="button" class="button" onclick="setState(4)">REEF!</button>
+                    <button type="button" class="button" onclick="setState(4)">Swim Ahead!</button>
                 </div>            
             </div>
         </div> 
@@ -56,9 +59,14 @@
 
         <div id="scavenger" class="scavenger-box">
             <div class="story-text">
-                None of the fish notice anything, do you? Tap around to make some observations.
+                None of the fish notice anything -- do you? 
+              
+              <br><br>Tap around to make some observations.
                 <button id="louse" class="button_clear" onclick="removeLouse(); addLouseToScrapbook(); showNextBtn(); alert('You find a marine parasite called salmon louse that live in warmer waters and has attatched itself to Sal and feeds on the skin, blood and mucus! Yuck!!!');"></button>
-                <div class="invisible">
+                <button id="algalBloom" class="button_clear" onclick="removeAlgalBloom(); addAlgalBloomToScrapbook(); showNextBtn(); alert('Good catch! There\'s a growing algal bloom, which depletes oxygen in the water and in turn can cause damage to the gills of fish and suffocate fish.');"></button>
+                <button id="coral" class="button_clear" onclick="removeCoral(); addCoralToScrapbook(); showNextBtn(); alert('White is an unhealthy look on any coral, which may be explained by losing the microscopic algae that produce food that corals need, placing stress on the corals.');"></button>
+              
+              <div class="invisible">
                     <button id="next-btn" type="button" class="button hidden" onclick="setState(5)">Swim Ahead</button>
                 </div>            
             </div>
@@ -68,13 +76,13 @@
       
         <div id="soup" class="soup-box">
             <div class="story-text">
-                Sal says bye to his friends and swims upstream to go back home, but he notices a large dam blocking his way.
-                Sal realizes that there are fewer creatures present then there were before. 
+                Sal says bye to his friends and starts his journey upstream. Along the way, he notices a large dam blocking his way.
+                <br><br>
+                Sal realizes that there are fewer creatures present now than there were before. Why is that?
                 <br><br>
                   <i>Maybe the dam is blocking nutrients.</i>
                 <br> <br>
-                <i>What's more, there could be cooler water and more nutrients released if the dam is broken </i>    
-      
+                <i>What's more, there could be cooler water and more nutrients released if the dam is broken </i>     
                 <div class="invisible">
                     <button type="button" class="button" onclick="setState(6)">Next</button>
                 </div>            
@@ -84,12 +92,19 @@
 
         <!-- Dam Screen -->
 
+        
         <div id="dam" class="dam-box">
             <div class="story-text">
-                There are cracks in the dam, tap on them to weaken it and break it down!       
-                   <button id="crack1" type="button" class="button_clear" onclick="showDamBtn();"></button>
-                   <button id="crack2" type="button" class="button_clear" onclick="showDamBtn();"></button>
-                   <button id="crack3" type="button" class="button_clear" onclick="showDamBtn();"></button>
+                Sal notices some cracks in the dam--
+              <br><br>
+              <i>If I swim into them enough times, can I weaken and break down the dam?</i>
+              <br><br>
+              Tap on the cracks to have Sal weaken the dam.
+                   <button id="crack1" type="button" class="button_clear" onclick = "showDamBtn();"></button>
+                   <button id="crack2" type="button" class="button_clear" onclick = "showDamBtn();"></button>
+                   <!-- 
+                      <button id="soap" type="button" class="button_clear" onclick="showDamBtn();"></button> 
+                    -->
               <div class="invisible">
                     <button id = "dam-btn" type="button" class="button hidden" onclick="setState(7)">Dam break!</button>
                 </div>            
@@ -101,15 +116,18 @@
 
         <div id="solve" class="solve-box">
           <div class = "story-text">
-             Hooray! The dam has been broken! The water rushes out and the nutrients and cooler water allow Sal to 
-             reach upstream and complete his goal successfully!
-             It's good Sal is ok, but in real life dams are major issues to river and other aquatic ecosystems.
-             Dams can: ( list some reasons dams are no bueno here)
-             Along with dams, we saw Sal suffer from parasites that appeared in warmer waters, climate change and global warming
-            can contribute to this issue causing more fish, just like Sal, to suffer and die from these parasites.
-            This can result in a drop in our food supply as well as major damage to ecosystems these fish are apart of.
+             Hooray! With the dam opening, Sal was able reach upstream and complete his goal successfully.
+            <br><br>
+            Water rushes out and the nutrients and cooler water over time allow life to thrive in these areas.  
+            <br><br>
+             It's good Sal could reach home to create a new generation of fish, but many dams around the world are becoming problematic and climate change stops for no one.
+            
+            <!-- 
+<br><br> Next you'll find some examples of challenges Salmon and other fish will have to overcome in order to continue existing. Did you find all of them?
+             button to move on!
+-->
             <div class="start-btn">
-                <button type="button" class="button" onclick="setState(8)">Next</button>
+                <button type="button" class="button" onclick="setState(8)">How so?</button>
             </div>
           </div>
         </div> 
@@ -119,13 +137,59 @@
 
         <div id="end" class="end-box">   
 
-            I will take care of this.
-            
+<div class="slider">
+		<!-- fade css -->
+		<div class="myslide fade">
+			<div class="txt">
+				<h1>Bad Sign: Salmon Louse</h1>
+				<p>Salmon louse is an aquatic parasite that act like sea lice and can infest Salmon and other fishes. Increased sea lice infestations, which scientists say are caused by salmon farms, threaten the already-vulnerable wild Pacific salmon populations in western Canada, worrying conservationists and First Nations.</p>
+			</div>
+			<img src="img/salmonlouse.jpg" style="width: 100%; height: 100%;">
+		</div>
+		
+		<div class="myslide fade">
+			<div class="txt">
+				<h1>Bad Sign: Algal Bloom</h1>
+				<p style="color:white;">Warmer temperatures prevent water from mixing, allowing algae to grow thicker and faster. Warmer water is easier for small organisms to move through and allows algae to float to the surface faster. Algal blooms absorb sunlight, making water even warmer and promoting more blooms.</p>
+			</div>
+			<img src="https://cdn.glitch.global/78a91c14-1110-4a27-8246-3e428f441424/algalbloom%20(1).jpg?v=1681635641152" style="width: 100%; height: 100%;">
+		</div>
+		
+		<div class="myslide fade">
+			<div class="txt">
+				<h1>Bad Sign: Dead Coral</h1>
+				<p style="color:white;">When corals become stressed and begin to bleach the first sign is paling, then part bleached, and then whole bleached when more than 90% of the coral colony is affected. If coral colonies remain bleached for an extended period of time and do not regain their symbiotic zooxanthellae, they will die.  Stony coral that is no longer covered in coral tissue often becomes covered in algae giving it a grey or reddish tinge.  Over time other reef organisms may begin growing on the dead coral, but once the coral tissue has died it will not return.</p>
+			</div>
+			<img src="https://cdn.glitch.global/78a91c14-1110-4a27-8246-3e428f441424/coral.PNG?v=1681635649313" style="width: 100%; height: 100%;">
+		</div>
+
+		<!-- /fade css -->
+		
+		<!-- onclick js -->
+		<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  		<a class="next" onclick="plusSlides(1)">&#10095;</a>
+		
+		<div class="dotsbox" style="text-align:center">
+			<span class="dot" onclick="currentSlide(1)"></span>
+			<span class="dot" onclick="currentSlide(2)"></span>
+			<span class="dot" onclick="currentSlide(3)"></span>
+
+		</div>
+		<!-- /onclick js -->
+	</div>
+          
+                      <div class="buttons">
+                <button type="button" style="left: 700px" class="button" onclick="setState(1)">Read Again</button>
+            </div>
+          
+      </div>
+              <!--         
             <div class="scrapbook-album" id="scrapbook_album">
     
                 <button id="prev_btn" class="flipbook-button">
                     <i class="fas fa-arrow-circle-left"></i>
                 </button>
+
         
                 <div id="book" class="book">
                     <div id="p1" class="paper">
@@ -133,7 +197,7 @@
                             <div id="f1" class="front-content">
                                 <br><br>
                                 <img src="img/scrapbook_frontCover.png">
-                                <h1>My Time at<br> <span class="red">C</span><span class="orange-red">a</span><span class="orange">m</span><span class="yellow">p</span> <span class="yellow-green">P</span><span class="green">r</span><span class="blue">i</span><span class="blue-violet">d</span><span class="purple">e</span> </h1>
+                                <h1>Real World Examples </h1>
                             </div>
                         </div>
                         <div class="back">
@@ -148,13 +212,13 @@
                         <div class="front">
                             <div id="f2" class="front-content">
                                 <h1 id="t1_savedMascot"></h1>
-                                <p id="d1_savedMascot" class="scrapbook-content">Huh, where's the mascot that's all over Camp Pride's flyers?</p>
+                                <p id="d1_savedMascot" class="scrapbook-content">Your observations have only <b>skimmed the surface</b>--</p>
                             </div>
                         </div>
                         <div class="back">
                             <div id="b2" class="back-content">
                                 <div class="frame">
-                                    <img id="i2_exploreNature" src="img/exploreNature.PNG" alt="explored nature">
+                                    <img id="i2_findLouse" src="img/salmonlouse.jpg" alt="found salmon louse">
                                 </div>
                             </div>
                         </div>
@@ -162,8 +226,8 @@
                     <div id="p3" class="paper">
                         <div class="front">
                             <div id="f3" class="front-content">
-                                <h1 id="t2_exploreNature"></h1>
-                                <p id="d2_exploreNature" class="scrapbook-content">🎵</p>
+                                <h1 id="t2_findLouse"></h1>
+                                <p id="d2_findLouse" class="scrapbook-content">The three main life stages of this aquatic parasite, the salmon louse: reproducing adult (top), mature adult (middle) and immature larvae (bottom).</p>
                             </div>
                         </div>
                         <div class="back">
@@ -192,84 +256,24 @@
                     <div id="p5" class="paper">
                         <div class="front">
                             <div id="f5" class="front-content">
-                                <h1 id="t5_fireworks"></h1>
-                                <p id="d5_fireworks" class="scrapbook-content">Thought I heard something go boom(!)</p>
+                                <h1 id="t5_violets"></h1>
+                                <p id="d5_violets" class="scrapbook-content">Roses are red, _________ are blue...</p>
                             </div>
                         </div>
                         <div class="back">
                             <div id="b5" class="back-content">
-                                <div class="frame">
-                                    <img id="i6_mountain" src="img/james_baldwin.PNG" alt="James Baldwin">
-                            
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div id="p6" class="paper">
-                        <div class="front">
-                            <div id="f6" class="front-content">
-                                <h1 id="t6_mountain"></h1>
-                                <p id="d6_mountain" class="scrapbook-content">＾ ⋏ ＾</p>
-                            </div>
-                        </div>
-                        <div class="back">
-                            <div id="b6" class="back-content">
-                                <div class="frame">
-                                    <img id="i7_donutsRiot" src="img/donuts_riot.PNG" alt="Cooper Do-nuts Riot">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div id="p7" class="paper">
-                        <div class="front">
-                            <div id="f7" class="front-content">
-                                <h1 id="t7_donutsRiot"></h1>
-                                <p id="d7_donutsRiot" class="scrapbook-content">＾○ ⋏ ○＾</p>
-                            </div>
-                        </div>
-                        <div class="back">
-                            <div id="b7" class="back-content">
-                                <div class="frame">
-                                    <img id="i8_blackCat" src="img/black_cat.PNG" alt="Black Cat Tavern">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div id="p8" class="paper">
-                        <div class="front">
-                            <div id="f8" class="front-content">
-                                <h1 id="t8_blackCat"></h1>
-                                <p id="d8_blackCat" class="scrapbook-content">＾○ ⋏ ○＾</p>
-                            </div>
-                        </div>
-                        <div class="back">
-                            <div id="b8" class="back-content">
-                                <div class="frame">
-                                    <img id="i9_violets" src="img/violet_quill.PNG" alt="The Violet Quill Club">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div id="p9" class="paper">
-                        <div class="front">
-                            <div id="f9" class="front-content">
-                                <h1 id="t9_violets"></h1>
-                                <p id="d9_violets" class="scrapbook-content">Roses are red, _________ are blue...</p>
-                            </div>
-                        </div>
-                        <div class="back">
-                            <div id="b9" class="back-content">
                                 <img src="img/scapbook_backCover.png">
                             </div>
                         </div>
                     </div>
                 </div>
+
         
                 <button id="next_btn" class="flipbook-button">
                     <i class="fas fa-arrow-circle-right"></i>
                 </button>
         
-                <button id="back_right" class="button scrapbook-page" onClick="load_page('loader_right','scrapbook_album','cabin')" alt="go back">
+                <button id="back_right" class="button scrapbook-page" alt="go back">
                     <p id="buttonText_goBack">Go Back</p>
                     <img src="img/back_arrow.png">
                 </button>
@@ -283,9 +287,10 @@
             </div>
         </div>
 
-<!--
-    The three main life stages of the salmon louse: reproducing adult (top), mature adult (middle) and immature larvae (bottom). Photo by Thomas Bjørkan via Wikimedia.
+
 -->
+
+
 
         <script src="./js/main.js"></script>
         <script src="js/scavenger.js" defer></script>

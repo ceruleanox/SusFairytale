@@ -1,11 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500;600;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+
 @import url('https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&family=Roboto:wght@300;400;500;700;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Slackey&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap');
 
 @import url('https://fonts.googleapis.com/css2?family=Mouse+Memoirs&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500;600;700&display=swap');
 
 * {
     margin: 0;
@@ -24,7 +23,7 @@ a {
 }
 
 h1 {
-    font-family: 'Slackey', cursive;
+      font-family: 'Mouse Memoirs', sans-serif;
 }
 
 
@@ -135,6 +134,18 @@ h1 {
     background-size: 600px;
 }
 
+/***************** REEF **************************/
+
+.reef-box {
+    background-image: url('https://cdn.glitch.global/78a91c14-1110-4a27-8246-3e428f441424/salFriends.jpg?v=1681584625711');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: left;
+    background-size: 600px;
+}
+
+
+
 /******************  SCAVENGER  ***********************/
 
 .scavenger-box {
@@ -146,14 +157,19 @@ h1 {
 }
 
 .button_clear {
-    border: none;
+    border-style: none;
     display: block;
     text-align: center;
     cursor: pointer;
     outline: none;
     overflow: hidden;
     position: absolute;
-    background-color: red;
+    background-color: transparent;
+  /*  
+      border-style: dotted;
+  border-radius: 5px;
+    border-color: red;
+  */
     margin: 0 auto;
 }
 
@@ -168,55 +184,372 @@ h1 {
     height: 60px;
     transform: rotate(28deg);
 }
+
+#algalBloom {
+    top: 10px;
+    left: 430px;
+    width: 160px;
+    height: 160px;
+}
+
+#coral {
+    top: 475px;
+    left: 350px;
+    width: 130px;
+    height: 80px;
+}
+
 /**************** Soup *****************/
 .soup-box
 {
-    background-image: url('https://cdn.glitch.global/78a91c14-1110-4a27-8246-3e428f441424/salSwim.jpg?v=1681535560595'); 
+    background-image: url('https://cdn.glitch.global/78a91c14-1110-4a27-8246-3e428f441424/salUpStream.jpg?v=1681585088245'); 
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: left;
     background-size: 600px;
-  /** re screenshot the picutre to get the sizing right **/
+  
 }
 /**************** Dam ******************/
 
 .dam-box {
-    background-image: url('https://cdn.glitch.global/78a91c14-1110-4a27-8246-3e428f441424/dam1.jpg?v=1681553248937'); 
+    background-image: url('https://cdn.glitch.global/78a91c14-1110-4a27-8246-3e428f441424/damPic.jpg?v=1681584349999'); 
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: left;
     background-size: 600px;
-  /** re screenshot the picutre to get the sizing right **/
+  
 }
 
 
 #crack1 {
-    top: 100px;
-    left: 10px;
+    top: 270px;
+    left: 150px;
     width: 50px;
-    height: 60px;
-    
+    height: 30px;
+    background-image: url('https://cdn.glitch.global/78a91c14-1110-4a27-8246-3e428f441424/cracks.png?v=1681587079822');
+    background-size: cover;
+    z-index: 10;   
 }
 
 #crack2{
-    top: 100px;
-    left: 150px;
+    top: 275px;
+    left: 450px;
     width: 50px;
+    height: 30px;  
+    background-image: url('https://cdn.glitch.global/78a91c14-1110-4a27-8246-3e428f441424/cracks.png?v=1681587079822');
+    background-size: cover;
+    z-index: 10;     
+}
+
+#soap {
+    top: 250px;
+    left: 280px;
+    width: 300px;
     height: 60px;
-  
-  #crack3{
-    top:100px;
-    left: 250px;
-    width: 50px;
-    height: 60px;
-  }
+    transform: rotate(28deg);
     
 }
 
+    
+
+/* solve box */
+.solve-box {
+    background-image: url('https://cdn.glitch.global/78a91c14-1110-4a27-8246-3e428f441424/breakDam.jpg?v=1681586016976'); 
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: left;
+    background-size: 600px;
+  
+}
+
+/**************** Scrapbook ******************/
+
+/* Book */
+.book {
+    position: relative;
+    width: 350px;
+    height: 500px;
+    transition: transform 0.5s;
+}
+
+.paper {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    perspective: 1500px;
+
+}
+
+.front,
+.back {
+    background-color: white;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    transform-origin: left;
+    transition: transform 0.5s;
+}
+
+.front {
+    z-index: 1;
+    backface-visibility: hidden;
+    border-left: 3px solid powderblue;
+}
+
+.back {
+    z-index: 0;
+}
+
+.front-content,
+.back-content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.back-content {
+    transform: rotateY(180deg)
+}
+
+/* Paper flip effect */
+.flipped .front,
+.flipped .back {
+    transform: rotateY(-180deg);
+}
+
+/* Controller Buttons */
+.flipbook-button {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    margin: 10px;
+    transition: transform 0.5s;
+}
+
+button:focus {
+    outline: none;
+}
+
+button:hover i {
+    color: #636363;
+}
+
+i {
+    color: gray;
+}
+
+/* Paper stack order */
+#p1 {
+    z-index: 5;
+}
+
+#p2 {
+    z-index: 4;
+}
+
+#p3 {
+    z-index: 3;
+}
+
+#p4 {
+    z-index: 2;
+}
+
+#p5 {
+    z-index: 1;
+}
+
+
+  /* 2 */
+.slider{
+	position: relative;
+	width: 100%;
+	background: green; /* darckblue */
+}
+.myslide{
+	height: 655px;
+	display: none;
+	overflow: hidden;
+}
+
+.prev, .next{
+	position: absolute;
+	top: 50%;
+	transform: translate(0, -50%);
+	font-size: 50px;
+	padding: 15px;
+	cursor: pointer;
+	color: #fff;
+	transition: 0.1s;
+	user-select: none;
+}
+.prev:hover, .next:hover{
+	color: green; 
+}
+.next{
+	right: 0;
+}
+.dotsbox{
+	position: absolute;
+	left: 50%;
+	transform: translate(-50%);
+	bottom: 20px;
+	cursor: pointer;
+}
+.dot{
+	display: inline-block;
+	width: 15px;
+	height: 15px;
+	border: 3px solid #fff;
+	border-radius: 50%;
+	margin: 0 10px;
+	cursor: pointer;
+}
+/* /2 */
+
+/* javascript */
+.active, .dot:hover{
+	border-color: green;
+}
+/* /javascript */
+
+/* muslide add fade */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: 0.8}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: 0.8}
+  to {opacity: 1}
+}
+/* /muslide add fade */
+
+/* 3 */
+.txt{
+	position: absolute;
+	color: #fff;
+	letter-spacing: 2px;
+	line-height: 35px;
+	top: 40%;
+	left: 15%;
+  background: rbga(0,0,0,.8);
+	-webkit-animation-name: posi;
+  	-webkit-animation-duration: 2s;
+  	animation-name: posi;
+  	animation-duration: 2s;
+	z-index: 1;
+}
+
+@-webkit-keyframes posi {
+  from {left: 25%;}
+  to {left: 15%;}
+}
+
+
+@keyframes posi {
+  from {left: 25%;}
+  to {left: 15%;}
+}
+
+.txt h1{
+	color: darkolivegreen;
+	font-size: 50px;
+	margin-bottom: 20px;
+  
+}
+.txt p{
+	font-size: 18px;
+  font-weight: bold;
+    line-height: 135%;
+  color: black;
+}
+/* /3 */
+
+/* 4 */
+img{
+	transform: scale(1.5, 1.5);
+	-webkit-animation-name: zoomin;
+  	-webkit-animation-duration: 40s;
+  	animation-name: zoomin;
+  	animation-duration: 40s;
+}
+@-webkit-keyframes zoomin {
+  from {transform: scale(1, 1);}
+  to {transform: scale(1.5, 1.5);}
+}
+
+
+@keyframes zoomin {
+  from {transform: scale(1, 1);}
+  to {transform: scale(1.5, 1.5);}
+}
+/* /4 */
 
 
 
-   /* transform: rotate(28deg);*/
+/* 5 */
+@media screen and (max-width: 800px){
+	.myslide{
+		height: 500px;
+	}
+	.txt{
+		letter-spacing: 2px;
+		line-height: 25px;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		-webkit-animation-name: posi2;
+		-webkit-animation-duration: 2s;
+		animation-name: posi2;
+		animation-duration: 2s;
+	}
+
+	@-webkit-keyframes posi2 {
+	  from {top: 35%;}
+	  to {top: 50%;}
+	}
+
+
+	@keyframes posi2 {
+	  from {top: 35%;}
+	  to {top: 50%;}
+	}
+
+	.txt h1{
+		font-size: 40px;
+	}
+	.txt p{
+		font-size: 13px;
+	}
+  
+
+}
+/* /5 */
+
+/* 6 */
+@media screen and (max-width: 520px){
+	.txt h1{
+		font-size: 30px;
+		margin-bottom: 20px;
+	}
+
+}
+/* /6 */
+ 
 
 
 
